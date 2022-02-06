@@ -1,0 +1,92 @@
+
+version: 2
+
+models:
+    - name: pop_destination
+      description: "popular destinations"
+      columns:
+          - name: month
+            tests:
+                - unique
+                - not_null
+          - name: pkup_zone
+            tests:
+                - unique
+                - not_null  
+          - name: dropoff_zone
+            tests:
+                - unique
+                - not_null 
+          - name: total_passengers
+            tests:
+                - unique
+                - not_null 
+          - name: ranking
+            tests:
+                - unique
+                - not_null 
+    - name: pop_destination_2019
+      description: "popular destinations 2019"
+      columns:
+          - name: month
+            tests:
+                - unique
+                - not_null
+          - name: pkup_zone
+            tests:
+                - unique
+                - not_null  
+          - name: dropoff_zone
+            tests:
+                - unique
+                - not_null 
+          - name: total_passengers
+            tests:
+                - unique
+                - not_null 
+          - name: ranking
+            tests:
+                - unique
+                - not_null 
+    - name: rides
+      description: "historical of rides"
+      columns:
+          - name: month
+            tests:
+                - unique
+                - not_null
+          - name: pkup
+            tests:
+                - unique
+                - not_null  
+          - name: dropoff
+            tests:
+                - unique
+                - not_null 
+          - name: total_rides
+            tests:
+                - unique
+                - not_null 
+          - name: ranking
+            tests:
+                - unique
+                - not_null 
+    - name: most_popular_dest
+      description: "most popular destinations"
+      columns:
+          - name: month
+            tests:
+                - unique
+                - not_null
+          - name: pkup
+            tests:
+                - unique
+                - not_null  
+          - name: dropoff
+            tests:
+                - unique
+                - not_null 
+          - name: ranking
+            tests:
+                - unique
+                - not_null 
