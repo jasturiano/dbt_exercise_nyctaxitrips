@@ -9,9 +9,9 @@ DBT_PROJECT_DIR = '/usr/local/airflow/dbt'
 
 dag = DAG(
     "dbt_dag",
-    start_date=datetime(2021, 01, 01),
+    start_date=datetime(2021, 1, 1),
     description="Invoke dbt using the BashOperator",
-    schedule_interval=None,
+    schedule_interval='@monthly',
     catchup=False,
 )
 
