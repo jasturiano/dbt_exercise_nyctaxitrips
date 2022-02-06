@@ -20,3 +20,26 @@ Create a data pipeline that collects information about the most popular destinat
 A dbt profile was created with its models in order to get the information from seeds and then apply transformation using MySQL as target database.
 
 *Note: As part of this exercise, it was realized that dbt is not good for load huge amount of data, always is recommended that you already have data in S3, GCS or a DWH prior start the transformations* 
+
+
+**Installing and Configuring dbt**
+
+```
+ $ sudo pip install dbt-mysql #Each integration needs to be installed separately
+ $ dbt --version
+ $ dbt init nyc_taxi_trips --adapter  mysql #Create the profile
+```
+
+Once we have the profile created, we need to put the DB information in the ~/.dbt/profiles.yml according with the choosen DB engine
+
+The structure of the SQL transformation are in the *models* folder with the *schema.yml* containing the DDLs 
+
+To Run the pipeline:
+
+```
+ $ dbt seed --profile taxi_trips_nyc #Just in case we need to load data, you will need to place the csv files in the data folder
+ $ dbt run --profile taxi_trips_nyc
+ $ dbt docs generate --profile taxi_trips_ny #Creates documentation about this profile
+ $ dbt docs serve --profile taxi_trips_nyc #Opens a web browser to check above document
+```
+
