@@ -11,6 +11,7 @@ We believe that dbt is the right tool for your data transformations if:
 4. You write idempotent data transformations.
 
 Please refer to this [doc](https://blog.getdbt.com/is-dbt-the-right-tool-for-my-data-transformations/) for further information about use cases.
+or the [Official Documentation](https://docs.getdbt.com/docs/introduction)
 
 
 **The use Case**
