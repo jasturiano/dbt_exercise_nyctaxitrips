@@ -44,8 +44,11 @@ To Run the pipeline:
  $ dbt docs serve --profile taxi_trips_nyc #Opens a web browser to check above document
 ```
 
+![Execution of the Pipeline](https://github.com/jasturiano/dbt_exercise_nyctaxitrips/blob/main/images/dbt_execution.png)
 
---- Pictures from dbt
+
+![dbt Documentation](https://github.com/jasturiano/dbt_exercise_nyctaxitrips/blob/main/images/dbt_document.png)
+
 
 **DB Outcome**
 
@@ -136,6 +139,9 @@ mysql> select * from most_popular_dest where pkup = 'Queens' order by month, ran
 10 rows in set (0.00 sec)
 ```
 
+**Orchestration**
+
+There could be different ways to orchestrate a dbt pipeline, Cloud Schedule in GCP in a cron manner for instance; however Airflow can fit here as well using the *BatchOperator* to call the dbt commands. The airflow folder contains a simple DAG with an example to perform this
 
 
 
